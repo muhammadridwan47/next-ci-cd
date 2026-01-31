@@ -1,8 +1,7 @@
 services:
   jenkins:
-    # GANTI baris 'image: ...' dengan 'build: .'
-    build: . 
-    container_name: jenkins_server
+    build: .                    # <--- WAJIB ADA (Titik artinya folder ini)
+    container_name: jenkins_serverr
     privileged: true
     user: root
     ports:
