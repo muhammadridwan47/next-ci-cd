@@ -2,8 +2,7 @@ FROM jenkins/jenkins:lts
 
 USER root
 
-# 1. Install Docker CLI
-# Ini diperlukan agar Jenkins bisa menjalankan perintah 'docker build'
+# 1. Install Docker CLI (Supaya jenkins bisa build image)
 RUN apt-get update && \
     apt-get install -y apt-transport-https \
                        ca-certificates \
@@ -16,10 +15,9 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y docker-ce-cli
 
-# 2. Install Node.js (Versi 18)
-# Ini diperlukan agar kita bisa test & install npm langsung di Jenkins tanpa docker-in-docker yang rumit
+# 2. Install Node.js & NPM (Versi 18) - INI YANG ANDA BUTUHKAN SEKARANG
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get install -y nodejs
 
-# Kembali ke user root (atau jenkins jika permission sudah diatur, tapi root paling aman untuk setup awal)
-USER root
+# Kembali ke user jenkins
+USER jenkins
