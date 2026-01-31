@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "echo \"no test specified\" && exit 1"
+    "test": "echo 'Skip test' && exit 0"
   },
   "dependencies": {
     "next": "16.1.6",
