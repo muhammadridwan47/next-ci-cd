@@ -1,4 +1,3 @@
-# GANTI DARI node:18-alpine MENJADI:
 FROM node:20-alpine
 
 WORKDIR /app
