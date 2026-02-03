@@ -1,2 +1,0 @@
-NextJS-Project/main
-NextJS-Project_main

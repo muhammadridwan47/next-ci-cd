@@ -1,7 +1,7 @@
 services:
   jenkins:
-    build: .                    # <--- WAJIB ADA (Titik artinya folder ini)
-    container_name: jenkins_serverr
+    build: .
+    container_name: jenkins_server
     privileged: true
     user: root
     ports:
